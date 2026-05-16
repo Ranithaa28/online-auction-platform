@@ -14,4 +14,4 @@ COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "C:\\Users\\ranit\\OneDrive\\Music\\Dokumen\\AuctionBazaar-Online-Auction-Platform-WebService-Development_Feb_2025-ranithaa-k-r\\target\\Auction_app-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/Auction_app-0.0.1-SNAPSHOT.jar"]
