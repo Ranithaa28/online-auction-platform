@@ -2,8 +2,7 @@ FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
-COPY src ./src
+COPY . .
 
 RUN mvn clean package -DskipTests
 
@@ -15,4 +14,4 @@ COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+CMD ["java", "-jar", "C:\\Users\\ranit\\OneDrive\\Music\\Dokumen\\AuctionBazaar-Online-Auction-Platform-WebService-Development_Feb_2025-ranithaa-k-r\\target\\Auction_app-0.0.1-SNAPSHOT.jar"]
