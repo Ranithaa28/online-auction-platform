@@ -12,9 +12,9 @@ public class AuctionAppApplication {
 		Dotenv dotenv = Dotenv.configure()
         .ignoreIfMissing()
         .load();
-		System.setProperty("Database_URI", dotEnv.get("Database_URI"));
-		System.setProperty("Db_username", dotEnv.get("DB_username"));
-		System.setProperty("Db_password", dotEnv.get("DB_password"));
+		System.setProperty("Database_URI", dotenv.get("jdbc:postgresql://localhost:5432/auctionbazaar"));
+		System.setProperty("Db_username", dotenv.get("postgres"));
+		System.setProperty("Db_password", dotenv.get("postgres"));
 		SpringApplication.run(AuctionAppApplication.class, args);
 	}
 
